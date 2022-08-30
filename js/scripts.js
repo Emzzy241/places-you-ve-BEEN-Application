@@ -59,3 +59,9 @@ Place.prototype.summary = function(){
      + this.howManyFNewFriendsFromPlace + " new friends at this place. Thanks for hearing me out, I know you would want to know if I would love to go to this place again and my answer is " + this.wouldYouLikeToGoAgain.toUpperCase() + "!!!";
 
 }
+
+// User Interface Logic 
+
+// TO start the ui logic, we create the global variable making the database for PlaceStorer || also called instantiator
+let myPlaceStorer = new PlaceStorer();
+
