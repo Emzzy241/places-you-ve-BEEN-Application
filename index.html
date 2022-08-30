@@ -14,11 +14,18 @@
     
 
     <div class="container">
-        <h1>Places You've been Application</h1>
-        <p>Welcome on board mate and input all places you've been</p>
+        <center>
+            <u>
+                <h1>Places You've been Application</h1>
+            </u>
+            <p>Welcome on board mate and input the details of the places you've been</p>
+        </center>
 
+        <div class="row">
+            
         <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
             <form class="form-group" id="allPlaces">
+                <h2>Add a Place</h2>
                 <label for="new-place-Name">Name of the Place: </label>
                 <input type="text" id="new-place-Name" class="form-control" placeholder="the name of the place ">
                 <br>
@@ -43,6 +50,23 @@
                 
             </form>
         </div>
+        <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+            <div id="place-shower">
+                <h2>Places</h2>
+                <p>Click on the place name to view place details</p>
+                <ul id="all-places"></ul>
+            </div>
+
+            <div id="show-all-places">
+                <h6>Place Name: <span class="show-place-name"></span></h6>
+                <h6>Age you visited the place: <span class="show-user-age"></span></h6>
+                <h6>Date you visited the Place: <span class="show-date-visited"></span></h6>
+                <h6>Friends you made: <span class="show-friends-user-made"></span></h6>
+                <h6>Would you love to visit again: <span class="show-user-status"></span></h6>
+            </div>
+        </div>
+        </div>
+
     </div>
     
 </body>
