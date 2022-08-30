@@ -72,15 +72,25 @@ function displayPlaceDetails(placesToDisplay){
     let htmlForPlaceInfo = "";
     Object.keys(placesToDisplay.places).forEach( function(key){
         const userPlace = placesToDisplay.findPlace(key);
-        htmlForPlaceInfo = "<li id=" + userPlace.id + ">" + userPlace.placeName + "</li>";
+        htmlForPlaceInfo += "<li id=" + userPlace.id + ">" + userPlace.placeName + "</li>";
 
     });
     placesList.html(htmlForPlaceInfo);
+    // after we call this function in our .ready() function, we can now add in a place successfully and get the name: all thanks to the DOM
 
+}
+
+function attachPlacesListener(){
+    $("ul#all-places").on("click", "li", function(){
+        // console.log("The id of this <li> is " + this.id + " !"); let us make it call a function now
+        showPlaces(this.id);
+        // "this" over here, refers to the <li> on the on() method
+    });
 }
 
 
 $(document).ready( function(){
+    attachPlacesListener();
     $("#allPlaces").submit( function(e){
         e.preventDefault();
         const nameOfPlace = $("#new-place-name").val();
@@ -92,8 +102,7 @@ $(document).ready( function(){
 
         let newPlace = new Place(nameOfPlace, ageOfUser, dateUserVisited, friendsUserMade, wouldUserGoAgain);
         myPlaceStorer.addPlace(newPlace);
-        // console.log(myPlaceStorer.places);
-        // console.log(newPlace.summary());
+        console.log(myPlaceStorer.places);
         // calling the displayPlaceDetails whenever we create a new place
         displayPlaceDetails(myPlaceStorer);
     });
