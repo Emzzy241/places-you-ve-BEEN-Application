@@ -73,6 +73,11 @@ $(document).ready( function(){
         const dateUserVisited = $("#new-date-user-visited-place").val();
         const friendsUserMade = $("#new-friends-user-made").val();
         const wouldUserGoAgain = $("#new-users-status").val();
-        
+
+
+        let newPlace = new Place(nameOfPlace, ageOfUser, dateUserVisited, friendsUserMade, wouldUserGoAgain);
+        myPlaceStorer.addPlace(newPlace);
+        console.log(myPlaceStorer.places);
+        console.log(newPlace.summary());
     });
 });

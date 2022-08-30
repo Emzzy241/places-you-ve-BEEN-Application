@@ -14,7 +14,7 @@ Expected Output: testingPlace.placeName = 'Oklahoma'
 
 <!-- The next test is on a summary button to summarize a user's experience to another user -->
 
-Describe: Submit Method
+Describe: Summary Method
 Test: It will ensure that after user inputs in a new Place, they can also get a summary of that place
 Code:    
     let testingPlace = new Place("Oklahoma", 19, "21st of September 2015", "4", "yes");
