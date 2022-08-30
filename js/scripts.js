@@ -65,3 +65,14 @@ Place.prototype.summary = function(){
 // TO start the ui logic, we create the global variable making the database for PlaceStorer || also called instantiator
 let myPlaceStorer = new PlaceStorer();
 
+$(document).ready( function(){
+    $("#allPlaces").submit( function(e){
+        e.preventDefault();
+        const nameOfPlace = $("#new-place-name").val();
+        const ageOfUser = $("#new-user-age").val();
+        const dateUserVisited = $("#new-date-user-visited-place").val();
+        const friendsUserMade = $("#new-friends-user-made").val();
+        const wouldUserGoAgain = $("#new-users-status").val();
+        
+    });
+});

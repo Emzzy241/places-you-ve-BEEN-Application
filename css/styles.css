@@ -12,3 +12,7 @@ body{
 .btn{
     margin-left: 20px;
 }
+
+#show-place-infos{
+    display: none;
+}
