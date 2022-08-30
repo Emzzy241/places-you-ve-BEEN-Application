@@ -56,7 +56,27 @@ Code:
 
 Expected Output: Both variable(objects-- dataType name) gets added to our PlaceStorer database and with unique id's too
 
-<!-- The test above has been passed, moving on to the next test
- -->
+<!-- The test above has been passed, moving on to the next test -->
 
 
+
+<!-- The next test is testing if our findPlace() method works -->
+
+Describe: findPlace() method
+Test: It will test if our findPlace() method can find a place in our database
+Code:
+    let myPlaceStorer = new PlaceStorer();
+    let testingPlace = new Place("Oklahoma", 19, "21st of September 2015", "4", "yes");
+    let testingPlace2 = new Place("Hawaii", 24, "30th of July 2009", "0", "no");
+
+    myPlaceStorer.addPlace(testingPlace);
+    myPlaceStorer.addPlace(testingPlace2);
+
+    myPlaceStorer.findPlace(1);
+    myPlaceStorer.findPlace(2);
+
+<!-- THis test has been passed: moving on to the next test -->
+
+
+
+<!-- The next test is testing if our deletePlace() method works -->

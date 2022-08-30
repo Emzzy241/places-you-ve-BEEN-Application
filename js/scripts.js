@@ -15,7 +15,23 @@ PlaceStorer.prototype.addPlace = function(place){
 PlaceStorer.prototype.assignId = function(){
     this.currentId += 1;
     return this.currentId;
-}
+};
+
+
+// the method for finding places
+// this method works with each place unique id's. if the method finds that place in our database, it will return that particular place but if it can't find that place, it returns false 
+
+PlaceStorer.prototype.findPlace = function(id){
+    if(this.places[id] !== undefined){
+        return this.places[id];
+    }
+    return false;
+};
+
+// the method for deleting places
+// deletePlace() method: we want to be able to find a place by its id in our database, and delete that particular place if its in our database
+
+
 
 // the constructor format for creating new places
 
@@ -37,4 +53,3 @@ Place.prototype.summary = function(){
      + this.howManyFNewFriendsFromPlace + " new friends at this place. Thanks for hearing me out, I know you would want to know if I would love to go to this place again and my answer is " + this.wouldYouLikeToGoAgain.toUpperCase() + "!!!";
 
 }
-
