@@ -49,7 +49,7 @@ Test: It will add a place to our PlaceStorer database and give each place a uniq
 Code:
     let myPlaceStorer = new PlaceStorer();
     let testingPlace = new Place("Oklahoma", 19, "21st of September 2015", "4", "yes");
-    let testingPlace2 = new Place("Hawaii", 24, "30th of July 2009", "0", "no");
+    let testingPlace2 = new Place("Hawaii", 24, "30th of July 2009", 0, "no");
 
     myPlaceStorer.addPlace(testingPlace)
     myPlaceStorer.addPlace(testingPlace2)

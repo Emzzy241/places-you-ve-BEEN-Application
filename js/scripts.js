@@ -65,6 +65,17 @@ Place.prototype.summary = function(){
 // TO start the ui logic, we create the global variable making the database for PlaceStorer || also called instantiator
 let myPlaceStorer = new PlaceStorer();
 
+// This method will take in Place as an object and display the placeDiaries
+
+function displayPlaceDetails(pacesTODisplay){
+    let placesList = $("ul#all-places");
+    let htmlForPlaceInfo = "";
+    Object.keys(pacesTODisplay);
+    
+
+}
+
+
 $(document).ready( function(){
     $("#allPlaces").submit( function(e){
         e.preventDefault();
