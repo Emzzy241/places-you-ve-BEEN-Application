@@ -21,3 +21,42 @@ Code:
 
     testingPlace.summary();
 Expected Output: An entire story on user's experience should be summarized
+
+
+<!-- Our mock database for storing places has been stored,let's add places in here manually to see if it stores them -->
+
+Describe: PlaceStorer(): the database housing all our places
+Test: It will check to see if we can add in new places manually and access them too
+Code:
+    <!-- First create the global variable for PlaceStorer || also called instantiator -->
+    let myPlaceStorer = new PlaceStorer();
+    <!-- And then the variables -->
+    let testingPlace = new Place("Oklahoma", 19, "21st of September 2015", "4", "yes");
+    let testingPlace2 = new Place("Hawaii", 24, "30th of July 2009", "0", "no");
+
+<!-- Then we input it manually like this -->
+myPlaceStorer.places = testingPlace;
+    
+Expected Output: When we try to see what's in our PlaceStorer database, we should get both of this variables like this:
+    If we do: myPlaceStorer.places
+    We should get the two variables created and we can access any place detail of our choice
+
+<!-- Test got passed but if we try adding in more than 1 place, it overrides the previous place, we don't want this, we could solve that by writing a method for it  -->
+
+
+Describe: addPlace() method
+Test: It will add a place to our PlaceStorer database and give each place a unique ID
+Code:
+    let myPlaceStorer = new PlaceStorer();
+    let testingPlace = new Place("Oklahoma", 19, "21st of September 2015", "4", "yes");
+    let testingPlace2 = new Place("Hawaii", 24, "30th of July 2009", "0", "no");
+
+    myPlaceStorer.addPlace(testingPlace)
+    myPlaceStorer.addPlace(testingPlace2)
+
+Expected Output: Both variable(objects-- dataType name) gets added to our PlaceStorer database and with unique id's too
+
+<!-- The test above has been passed, moving on to the next test
+ -->
+
+
