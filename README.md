@@ -63,7 +63,7 @@ Expected Output: Both variable(objects-- dataType name) gets added to our PlaceS
 <!-- The next test is testing if our findPlace() method works -->
 
 Describe: findPlace() method
-Test: It will test if our findPlace() method can find a place in our database
+Test: It will test if our findPlace() method can find a place(note: we are using that place's unique id) in our database 
 Code:
     let myPlaceStorer = new PlaceStorer();
     let testingPlace = new Place("Oklahoma", 19, "21st of September 2015", "4", "yes");
@@ -80,3 +80,20 @@ Code:
 
 
 <!-- The next test is testing if our deletePlace() method works -->
+
+Describe: deletePlace() method
+Test: it will check if the method can find that place with its unique id in our database and also delete that entire placeInfo by deleting its id
+Code:
+    let myPlaceStorer = new PlaceStorer();
+    let testingPlace = new Place("Oklahoma", 19, "21st of September 2015", "4", "yes");
+    let testingPlace2 = new Place("Hawaii", 24, "30th of July 2009", "0", "no");
+
+    myPlaceStorer.addPlace(testingPlace);
+    myPlaceStorer.addPlace(testingPlace2);
+
+    myPlaceStorer.deletePlace(1);
+    myPlaceStorer.deletePlace(2);
+
+
+<!-- Test got passed and done with all the tests in the business Logic -->
+<!-- Done with the business Logic, Now off to the UI Logic -->

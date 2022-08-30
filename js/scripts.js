@@ -31,7 +31,13 @@ PlaceStorer.prototype.findPlace = function(id){
 // the method for deleting places
 // deletePlace() method: we want to be able to find a place by its id in our database, and delete that particular place if its in our database
 
-
+PlaceStorer.prototype.deletePlace = function(id){
+    if(this.places[id] === undefined){
+        return false;
+    }
+    delete this.places[id];
+    return true;
+}
 
 // the constructor format for creating new places
 
