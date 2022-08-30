@@ -16,3 +16,6 @@ body{
 #show-place-infos{
     display: none;
 }
+#all-places{
+    margin-left: 40px;
+}

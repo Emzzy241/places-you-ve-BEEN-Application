@@ -67,11 +67,15 @@ let myPlaceStorer = new PlaceStorer();
 
 // This method will take in Place as an object and display the placeDiaries
 
-function displayPlaceDetails(pacesTODisplay){
+function displayPlaceDetails(placesToDisplay){
     let placesList = $("ul#all-places");
     let htmlForPlaceInfo = "";
-    Object.keys(pacesTODisplay);
-    
+    Object.keys(placesToDisplay.places).forEach( function(key){
+        const userPlace = placesToDisplay.findPlace(key);
+        htmlForPlaceInfo = "<li id=" + userPlace.id + ">" + userPlace.placeName + "</li>";
+
+    });
+    placesList.html(htmlForPlaceInfo);
 
 }
 
@@ -88,7 +92,9 @@ $(document).ready( function(){
 
         let newPlace = new Place(nameOfPlace, ageOfUser, dateUserVisited, friendsUserMade, wouldUserGoAgain);
         myPlaceStorer.addPlace(newPlace);
-        console.log(myPlaceStorer.places);
-        console.log(newPlace.summary());
+        // console.log(myPlaceStorer.places);
+        // console.log(newPlace.summary());
+        // calling the displayPlaceDetails whenever we create a new place
+        displayPlaceDetails(myPlaceStorer);
     });
 });
