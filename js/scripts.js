@@ -80,11 +80,21 @@ function displayPlaceDetails(placesToDisplay){
 
 }
 
+// function for showPlaces()
+
+function showPlaces(placeId){
+    const place = myPlaceStorer.findPlace(placeId);
+    $("#show-place-infos").show();
+    $("")
+}
+
+
+
 function attachPlacesListener(){
     $("ul#all-places").on("click", "li", function(){
         // console.log("The id of this <li> is " + this.id + " !"); let us make it call a function now
         showPlaces(this.id);
-        // "this" over here, refers to the <li> on the on() method
+        // "this" over here, refers to the <li> on the on() method... "click" is the event our handler is listening for while the "li" is the actual element that the handler is attached to
     });
 }
 
