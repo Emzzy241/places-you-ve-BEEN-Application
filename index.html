@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,9 @@
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/scripts.js"></script>
 </head>
+
 <body>
-    
+
 
     <div class="container">
         <center>
@@ -22,60 +24,66 @@
         </center>
 
         <div class="row">
-            
-        <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
-            <form class="form-group" id="allPlaces">
-                <h2>Add a Place</h2>
-                <label for="new-place-name">Name of the Place: </label>
-                <input type="text" id="new-place-name" class="form-control" placeholder="the name of the place ">
-                <br>
 
-                <label for="new-user-age">What was your age when you went to this place: </label>
-                <input type="text" id="new-user-age" class="form-control" placeholder="Please specify age in numbers">
-                <br>
+            <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                <form class="form-group" id="allPlaces">
+                    <h2>Add a Place</h2>
+                    <label for="new-place-name">Name of the Place: </label>
+                    <input type="text" id="new-place-name" class="form-control" placeholder="the name of the place ">
+                    <br>
 
-                <label for="new-date-user-visited-place">Date you went to this place: </label>
-                <input type="text" id="new-date-user-visited-place" class="form-control" placeholder="Date format e.g: 25th of September 2022 only">
-                <br>
+                    <label for="new-user-age">What was your age when you went to this place: </label>
+                    <input type="text" id="new-user-age" class="form-control"
+                        placeholder="Please specify age in numbers">
+                    <br>
 
-                <label for="new-friends-user-made">How many Friends did you make in this place: </label>
-                <input type="text" id="new-friends-user-made" class="form-control" placeholder="Please input only numbers e.g: 4">
-                <br>
+                    <label for="new-date-user-visited-place">Date you went to this place: </label>
+                    <input type="text" id="new-date-user-visited-place" class="form-control"
+                        placeholder="Date format e.g: 25th of September 2022 only">
+                    <br>
 
-                <label for="new-users-status">Would you Love to visit this Place again?: </label>
-                <input type="text" id="new-users-status" class="form-control" placeholder="yes or no">
-                <br>
+                    <label for="new-friends-user-made">How many Friends did you make in this place: </label>
+                    <input type="text" id="new-friends-user-made" class="form-control"
+                        placeholder="Please input only numbers e.g: 4">
+                    <br>
 
-                <button type="submit" id="submitPlace" class="btn btn-light">Add Place</button>
-                <a href="./index.html" class="btn btn-danger">Format!!!</a>
-                
-            </form>
-        </div>
-        <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
-            <div id="place-shower">
+                    <label for="new-users-status">Would you Love to visit this Place again?: </label>
+                    <input type="text" id="new-users-status" class="form-control" placeholder="yes or no">
+                    <br>
+
+                    <button type="submit" id="submitPlace" class="btn btn-light">Add Place</button>
+                    <a href="./index.html" class="btn btn-danger">Format!!!</a>
+
+                </form>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                <!-- <div id="place-shower"> -->
                 <h2>Places</h2>
                 <p>Click on the place name to view place details</p>
+
                 <ul id="all-places"></ul>
-            </div>
+                <!-- </div> -->
 
-            <div id="show-place-infos">
-                <h6>Place Name: <span class="show-place-name"></span></h6>
-                <h6>Age you visited the place: <span class="show-user-age"></span></h6>
-                <h6>Date you visited the Place: <span class="show-date-visited"></span></h6>
-                <h6>Friends you made at Place: <span class="show-friends-user-made"></span></h6>
-                <h6>Would you love to visit again: <span class="show-user-status"></span></h6>
+                <div id="show-place-infos">
 
-                <div id="deleteButton">
+                    <h6>Place Name: <span class="show-place-name"></span></h6>
+                    <h6>Age you visited the place: <span class="show-user-age"></span></h6>
+                    <h6>Date you visited the Place: <span class="show-date-visited"></span></h6>
+                    <h6>Friends you made at Place: <span class="show-friends-user-made"></span></h6>
+                    <h6>Would you love to visit again: <span class="show-user-status"></span></h6>
 
+                    <div id="deleteButton">
+
+                    </div>
+                    <div id="editButton">
+
+                    </div>
                 </div>
-                <div id="editButton">
-                    
-                </div>
             </div>
-        </div>
         </div>
 
     </div>
-    
+
 </body>
+
 </html>

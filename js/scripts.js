@@ -104,6 +104,14 @@ function attachPlacesListener(){
         showPlaces(this.id);
         // "this" over here, refers to the <li> on the on() method... "click" is the event our handler is listening for while the "li" is the actual element that the handler is attached to
     });
+
+    // code for the delete button
+    $("#deleteButton").on("click", ".deleteButton", function(){
+        // myPlaceStorer.deletePlace(this.id);
+        myPlaceStorer.deletePlace(this.id);
+        $("#show-place-infos").hide();
+        displayPlaceDetails(myPlaceStorer);
+    });
 }
 
 
