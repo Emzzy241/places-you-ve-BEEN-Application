@@ -85,11 +85,15 @@ function displayPlaceDetails(placesToDisplay){
 function showPlaces(placeId){
     const place = myPlaceStorer.findPlace(placeId);
     $("#show-place-infos").show();
-    $(".show-place-name").html(placeId.placeName);
-    $(".show-user-age").html(placeId.yourAge);
-    $(".show-date-visited").html(placeId.dateYouVisitedPlace);
-    $(".show-friends-user-made").html(placeId.howManyNewFriendsFromPlace);
-    $(".show-user-status").html(placeId.wouldYouLikeToGoAgain);
+    $(".show-place-name").html(place.placeName);
+    $(".show-user-age").html(place.yourAge);
+    $(".show-date-visited").html(place.dateYouVisitedPlace);
+    $(".show-friends-user-made").html(place.howManyNewFriendsFromPlace);
+    $(".show-user-status").html(place.wouldYouLikeToGoAgain);
+
+    let delButton = $("#deleteButton");
+    delButton.empty();
+    delButton.append("<button class='deleteButton btn btn-danger' id=" + place.id + ">Delete</button>")
 }
 
 
