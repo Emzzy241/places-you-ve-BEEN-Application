@@ -41,11 +41,11 @@ PlaceStorer.prototype.deletePlace = function(id){
 
 // the constructor format for creating new places
 
-function Place(placeName, yourAge, dateYouVisitedPlace, howManyFNewFriendsFromPlace , wouldYouLikeToGoAgain){
+function Place(placeName, yourAge, dateYouVisitedPlace, howManyNewFriendsFromPlace , wouldYouLikeToGoAgain){
     this.placeName = placeName;
     this.yourAge = yourAge;
     this.dateYouVisitedPlace = dateYouVisitedPlace;
-    this.howManyFNewFriendsFromPlace = howManyFNewFriendsFromPlace;
+    this.howManyNewFriendsFromPlace = howManyNewFriendsFromPlace;
     this.wouldYouLikeToGoAgain = wouldYouLikeToGoAgain;
 }
 
@@ -56,7 +56,7 @@ function Place(placeName, yourAge, dateYouVisitedPlace, howManyFNewFriendsFromPl
 Place.prototype.summary = function(){
     return "Hi, You don't need to know my name but I have something to tell you about this place I once visited. The name of the place was "
      + this.placeName + ", I visited the place when I was " + this.yourAge + " and the day I visited was on the " + this.dateYouVisitedPlace + ". I made a total number of "
-     + this.howManyFNewFriendsFromPlace + " new friends at this place. Thanks for hearing me out, I know you would want to know if I would love to go to this place again and my answer is " + this.wouldYouLikeToGoAgain.toUpperCase() + "!!!";
+     + this.howManyNewFriendsFromPlace + " new friends at this place. Thanks for hearing me out, I know you would want to know if I would love to go to this place again and my answer is " + this.wouldYouLikeToGoAgain.toUpperCase() + "!!!";
 
 }
 
@@ -85,7 +85,11 @@ function displayPlaceDetails(placesToDisplay){
 function showPlaces(placeId){
     const place = myPlaceStorer.findPlace(placeId);
     $("#show-place-infos").show();
-    $("")
+    $(".show-place-name").html(placeId.placeName);
+    $(".show-user-age").html(placeId.yourAge);
+    $(".show-date-visited").html(placeId.dateYouVisitedPlace);
+    $(".show-friends-user-made").html(placeId.howManyNewFriendsFromPlace);
+    $(".show-user-status").html(placeId.wouldYouLikeToGoAgain);
 }
 
 
